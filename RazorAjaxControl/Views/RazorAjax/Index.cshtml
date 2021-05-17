@@ -1,0 +1,53 @@
+﻿@using RazorAjaxControl.Models
+@model RazorAjaxControl.Models.RazorAjaxViewModels
+@{
+    ViewBag.Title = "ASP.NET MVC5: Formulario com Ajax e Razor";
+}
+<div class="row">
+    <div class="panel-heading">
+        <div class="col-md-8">
+            <h3>
+                <i class="fa fa-file-text-o"></i>
+                <span>ASP.NET MVC5: Formulario com Ajax e Razor</span>
+            </h3>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <section class="col-md-4 col-md-push-4">
+        @using (Ajax.BeginForm("Index", "RazorAjax", 
+            new AjaxOptions { HttpMethod = "POST", OnSuccess = "onAjaxRequestSuccess" },
+            new { @id = "AjaxformId", @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="well bs-component">
+                <br />
+                <div class="row">
+                    <div class="col-md-12 col-md-push-2">
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-pull-1">
+                                @Html.TextBoxFor(m => m.Text, new { placeholder = Html.DisplayNameFor(m => m.Text), @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Text, "", new { @class = "text-danger custom-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-18">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4 col-md-push-2">
+                                <div>
+                                    <button type="submit"
+                                            class="btn btn-warning"
+                                            value="Process">
+                                        <span class="ladda-label">Process</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </section>
+</div>  

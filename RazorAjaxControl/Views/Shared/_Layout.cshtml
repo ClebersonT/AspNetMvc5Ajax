@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title> 
+    @Styles.Render("~/Content/css") 
+    @Scripts.Render("~/bundles/modernizr")
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <!-- Button Loader -->
+    @Styles.Render("~/Plugin/Ladda-loader/css")
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <center>
+                <p><strong>Cleberson Teodoro @DateTime.Now.Year</p>
+            </center>
+        </footer>
+    </div> 
+    @*Scripts*@ 
+    @Scripts.Render("~/bundles/jquery") 
+    @Scripts.Render("~/bundles/jqueryval") 
+    @Scripts.Render("~/bundles/bootstrap")
+    <!-- Custom Form -->
+    @Scripts.Render("~/scripts/custom-form") @RenderSection("scripts", required: false)
+</body>
+
+</html>  
