@@ -17,7 +17,7 @@
     <section class="col-md-4 col-md-push-4">
         @using (Ajax.BeginForm("Index", "RazorAjax", 
             new AjaxOptions { HttpMethod = "POST", OnSuccess = "onAjaxRequestSuccess" },
-            new { @id = "AjaxformId", @class = "form-horizontal", role = "form" }))
+            new { @id = "AjaxformId", @class = "form-horizontal", role = "form" })) 
         {
             @Html.AntiForgeryToken()
             <div class="well bs-component">
