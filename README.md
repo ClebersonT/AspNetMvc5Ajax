@@ -3,7 +3,8 @@ Exemplo simples utilizando o framework ASP NET MVC 5 + Razor com chamadas assinc
 
 <img alt="HTML" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">&nbsp;<img alt=".Net" src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=dot-net&logoColor=white">&nbsp;<img alt="C#" src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white">&nbsp;
 
-##O que é o Razor?
+## O que é o Razor?
+
 Vamos entender um pouco do Razor para que possamos entender como utilizar Html Helpers...
 Razor é uma sintaxe de marcação para a incorporação de código baseado em servidor em páginas da Web. A Razor sintaxe consiste em Razor marcação, C# e HTML. Os arquivos que Razor contêm geralmente têm uma extensão de arquivo .cshtml. Razor também é encontrado em arquivos Razor de componentes (.razor).
 
